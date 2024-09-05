@@ -457,7 +457,7 @@ print(predictions)
 
 ## Analyze the results
 
-So after all the mentioned on the documentation, we got nice results reaching an accuracy on validation data of something around 96-98%, and the time to execute each prediction it's just negligible; and the best part, that on the project that we want to include our model, we will just need to have `onnxruntime` (vewry light), `numpy` used on most of the projects, and `PIL`.
+So after all the mentioned on the documentation, we got nice results reaching an accuracy on validation data of something around 96-98%, and the time to execute each prediction it's just negligible; and the best part, that on the project that we want to include our model, we will just need to have `onnxruntime` (very light), `numpy` used on most of the projects, and `PIL`.
 
 So we can conclude that the project was a success, and the model was implemented on the main project, having a nice performance.
 
