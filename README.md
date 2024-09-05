@@ -1,11 +1,25 @@
 # ML Model - Classification of images as text or display
 
 # Table of contents
-- [Data](#Data)
-- [Section 2](#id-section2)
+- [Problem](#problem)
+- [Solution](#solution)
+- [Implementation](#implementation)
+    - [Data](#data)
+    - [Tabulation of the data](#tabulation-of-the-data)
+    - [Train a model from 0](#train-a-model-from-0)
+    - [Re-train the YOLOv8 Model](#re-train-the-YOLOv8-Model)
+    - [Make predictions](#make-predictions)
+    - [Export the model](#export-the-model)
+    - [Optimizing the exported model](#optimizing-the-exported-model)
+        - [Pre-process the image using torchvision transforms](#pre-process-the-image-using-torchvision-transforms)
+        - [Pre-process the image to predict using PIL](#pre-process-the-image-to-predict-using-PIL)
+- [Analyze the results](#analyze-the-results)
+- [Ideas to have better results / accuracy of classification](#ideas-to-have-better-results-/-accuracy-of-classification)
 
 ## Problem
 On the ads-capture project, we have a lot of different case scenarios where the ads have different types. Some examples are html ads, images or text (and others like videos, ...).
+
+![imagen](https://github.com/user-attachments/assets/f4614c14-e974-4205-ae05-aa5469fc608e)
 
 For this reason, the classification of the ad_type, it's not an easy task, sometimes `XPaths` rules are not enough to detect the resources inside an ad, maybe because they are in another nested iframe, also can be that the rules that actually exists doesn't match the criteria for that ad, or just the `XPaths` are not enough or updated to cover all cases.
 
@@ -97,11 +111,19 @@ For this reason, I have to manually clean the data, and define a criteria to say
 
 - Text example
 
+![banner_2c05526f2d42e4abaa3da223e99eea2a](https://github.com/user-attachments/assets/23becfe9-3c63-4629-8509-8cdc2ff13c24)
+
 - Text example w/ small Logo
+
+![banner_ab253302b76b053f7ec420dd29061104](https://github.com/user-attachments/assets/8daa6f94-b491-4087-ae71-6973ee5fdc03)
 
 - Display example w/ small image
 
+![banner_36d5b579438d60adcf8efa18c4a22ee2](https://github.com/user-attachments/assets/1f9ae8b1-3e93-4e05-bae0-8857a2af1cf0)
+
 - Display example
+
+![banner_56b5b00071d2105b0f71ae51be7b0cd1](https://github.com/user-attachments/assets/8ff55bcd-f31c-4194-bf89-200387c9c0c7)
 
 ### Train a model from 0
 
@@ -306,9 +328,15 @@ Running the previous script, will generate a `runs` folder on our `root`, that w
 
 - Train batch_0 image:
 
+![train_batch0](https://github.com/user-attachments/assets/9c8f510c-e928-4457-8b34-d80d9305eae9)
+
 - Val batch_0 image:
 
+![val_batch0_labels](https://github.com/user-attachments/assets/c6ecdade-bba1-461d-a2af-0740b115f333)
+
 - Results graphs:
+
+![results](https://github.com/user-attachments/assets/de9707f0-8878-4290-b51b-dcd46cf7e3d0)
 
 ### Make predictions
 
